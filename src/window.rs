@@ -540,6 +540,7 @@ impl AppWindow {
         });
         settings::install_themes();
         crate::programs::install_icons();
+        crate::copilot::install_hooks();
         w.reload_config(window, cx);
         install_layouts();
         let name = mods::shared("layout").and_then(|v| v.as_str().map(str::to_owned)).filter(|n| layout_path(n).exists());

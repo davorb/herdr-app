@@ -4,6 +4,7 @@
 mod bench;
 mod commands;
 mod control;
+mod copilot;
 mod core_bin;
 mod files;
 mod hc;

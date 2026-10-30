@@ -146,6 +146,10 @@ machine first, then machines by name; `space.move` stays inside its machine's bl
   `working`, `blocked`, `idle`, or `done` = finished while the user wasn't
   looking (it becomes `idle` once they look). A space's and a tab's
   status is the most urgent of its agents: blocked > done > working > idle.
+  GitHub Copilot CLI doesn't report on its own: on macOS and Linux, Herdr
+  writes `hooks/herdr.json` into Copilot's folder (`~/.copilot`, or
+  `COPILOT_HOME`) on start so its hooks report for it. An interrupted
+  Copilot turn shows `working` until its next prompt.
 - **Sub-agents** are terminals an agent started with `hc run`: the core
   records the starter as `parent` (see `terminals()`). They belong to their
   parent's tab without a pane; the `agents` mod shows them,
